@@ -1,6 +1,12 @@
-// complete the given function
+function isPalindrome(str) {
+  
+  const formattedStr = str.toLowerCase().replace(/[\W_]/g, '');
 
-function palindrome(str){
-
+ 
+  return formattedStr === formattedStr.split('').reverse().join('');
 }
-module.exports = palindrome
+
+
+const testString = "RaceCar";
+const isPal = isPalindrome(testString);
+console.log(isPal); 
